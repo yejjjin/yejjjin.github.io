@@ -1,5 +1,32 @@
 @import "variables", "mixins", "fonts", "reset";
 
-#contents_00 {
-  background-color: red;
+.home {
+  display: flex;
+  flex-direction: column;
+  .home-tit {
+    text-align: center;
+    p {
+      font-size: 50px;
+      color: $white;
+    }
+    h1 {
+      font-family: $font-scondary;
+      font-size: 100px;
+      color: $white;
+    }
+  }
+
+  .file {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+      font-size: 30px;
+    }
+  }
 }

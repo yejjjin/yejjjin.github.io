@@ -66,8 +66,8 @@ $(document).ready(function () {
     //Design
     controlArrows: true,
     verticalCentered: true,
-    sectionsColor: ["black", "black", "black"],
-    paddingTop: "3em",
+    sectionsColor: ["#111111", "black", "black"],
+    // paddingTop: "3em",
     paddingBottom: "10px",
     fixedElements: "#header, .footer",
     responsiveWidth: 0,
