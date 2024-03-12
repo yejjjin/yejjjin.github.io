@@ -329,8 +329,10 @@ legend {
 }
 
 .home {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .home .home-tit {
   text-align: center;
@@ -354,5 +356,94 @@ legend {
   flex-direction: column;
   align-items: center;
   color: #fff;
+  font-size: 30px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about h1 {
+  font-family: "Arsenica-Regular";
+  font-size: 100px;
+  color: #fff;
+  text-align: center;
+}
+.about .airdrop {
+  height: 500px;
+  width: 412px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .airdrop .airdrop-tit {
+  height: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about .airdrop .airdrop-tit h2 {
+  font-weight: 600;
+}
+.about .airdrop .airdrop-tit h3 {
+  font-weight: 500;
+}
+.about .airdrop .airdrop-img img {
+  display: block;
+}
+.about .airdrop .airdrop-btn {
+  height: 66px;
+  display: flex;
+  align-items: center;
+}
+.about .airdrop .airdrop-btn a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #173fbb;
+  justify-content: center;
+}
+
+.contact {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+.contact .footer-tit {
+  display: flex;
+  justify-content: space-between;
+  font-size: 100px;
+  text-align: center;
+}
+.contact .footer-tit .contact-tit,
+.contact .footer-tit .me-tit {
+  display: flex;
+  align-items: center;
+}
+.contact .footer-tit .message {
+  display: flex;
+  flex-direction: column;
+}
+.contact .footer-tit .message img {
+  height: 60px;
+}
+.contact .phone {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contact .phone img {
+  height: 750px;
+}
+.contact .copyright {
+  display: flex;
+  justify-content: center;
   font-size: 30px;
 }/*# sourceMappingURL=comm.css.map */
