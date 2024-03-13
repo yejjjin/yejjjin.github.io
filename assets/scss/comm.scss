@@ -75,70 +75,76 @@
     }
 
     .airdrop-btn {
+      width: 100%;
       height: 66px;
       display: flex;
       align-items: center;
 
-      a {
-        width: 100%;
+      .btn {
+        width: 50%;
         display: flex;
-        align-items: center;
-        color: #173fbb;
         justify-content: center;
-      }
+        align-items: center;
+        height: 100%;
+        font-size: 20px;
 
-      // .scroll {
-      //   display: flex;
-      //   align-items: center;
-      //   font-weight: 600;
-      //   border-left: 1px solid #d8d8d8;
-      //   height: 100%;
-      // }
+        a {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          color: #173fbb;
+          justify-content: center;
+        }
+      }
+      .scroll {
+        a {
+          font-weight: 600;
+          border-left: 1px solid #d8d8d8;
+        }
+      }
     }
   }
 }
 
 .contact {
-  height: 100%;
+  height: 100vh;
+  color: $white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: $white;
-  position: relative;
+  justify-content: space-between;
 
-  .footer-tit {
+  .inner {
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    font-size: 100px;
-    text-align: center;
+    padding: 50px 0 30px;
 
-    .contact-tit,
-    .me-tit {
+    .copyright {
       display: flex;
-      align-items: center;
     }
-
-    .message {
+    .phone {
       display: flex;
-      flex-direction: column;
       img {
-        height: 60px;
+        height: 700px;
       }
     }
   }
 
-  .phone {
+  .footer-tit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-scondary;
+    font-size: 100px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    img {
-      height: 750px;
-    }
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  .copyright {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
+  .message {
+    display: none;
   }
 }
