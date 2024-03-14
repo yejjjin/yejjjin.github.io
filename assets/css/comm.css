@@ -368,6 +368,7 @@ legend {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .about h1 {
   font-family: "Arsenica-Regular";
@@ -426,6 +427,60 @@ legend {
 .about .airdrop .airdrop-btn .scroll a {
   font-weight: 600;
   border-left: 1px solid #d8d8d8;
+}
+.about .airdrop-hover {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+.about .airdrop-hover .album {
+  display: flex;
+  background-color: antiquewhite;
+}
+.about .airdrop-hover .intro {
+  display: flex;
+  background-color: azure;
+}
+.about .airdrop-hover {
+  display: none;
+}
+.about .airdrop-btn .hover:hover ~ .airdrop-hover {
+  display: flex;
+}
+
+.project {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project .portfolio {
+  max-height: 800px;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../images/mac-pc.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  color: #000;
+}
+.project .portfolio .port-tit {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+.project .portfolio .work {
+  display: flex;
+}
+.project .portfolio .work .work-view {
+  width: 60%;
+  background-color: lightblue;
+}
+.project .portfolio .work .work-desc {
+  width: 40%;
+  background-color: lavenderblush;
 }
 
 .contact {
