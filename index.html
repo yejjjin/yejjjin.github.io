@@ -24,6 +24,8 @@
     />
     <meta name="twitter:domain" content="사이트 명" />
     <link rel="stylesheet" href="./assets/css/comm.css" />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css"
@@ -31,6 +33,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -51,10 +55,10 @@
         <div class="home">
           <div class="home-tit">
             <p>PORTFOLIO BY YEJINHEO</p>
-            <h1>
-              WELCOME TO MY <br />
-              ARCHIVE
-            </h1>
+            <div class="main-tit">
+              <h1>WELCOME TO MY</h1>
+              <h1><span class="cursor">&nbsp;</span></h1>
+            </div>
           </div>
 
           <div class="file">
@@ -85,21 +89,26 @@
         <div class="about">
           <h1>ABOUT ME</h1>
           <div class="airdrop">
-            <div class="airdrop-tit">
-              <h2>AirDrop</h2>
-              <h3>이 파일을 공유하려고 합니다.</h3>
+            <div class="airdrop-inner">
+              <div class="airdrop-tit">
+                <h2>AirDrop</h2>
+                <h3>이 파일을 공유하려고 합니다.</h3>
+              </div>
+              <div class="airdrop-img">
+                <img
+                  src="./images/sample-goyunjeong.png"
+                  alt="에어드랍 이미지"
+                />
+              </div>
+              <div class="airdrop-btn">
+                <div class="btn hover">Hover</div>
+                <div class="btn scroll">Scroll</div>
+              </div>
             </div>
-            <div class="airdrop-img">
-              <img src="./images/sample-goyunjeong.png" alt="에어드랍 이미지" />
+            <div class="airdrop-hover">
+              <div class="album">사진</div>
+              <div class="intro">introduce</div>
             </div>
-            <div class="airdrop-btn">
-              <div class="btn hover"><a href="#">Hover</a></div>
-              <div class="btn scroll"><a href="#">Scroll</a></div>
-            </div>
-          </div>
-          <div class="airdrop-hover">
-            <div class="album">사진</div>
-            <div class="intro">introduce</div>
           </div>
         </div>
       </section>
@@ -185,9 +194,15 @@
           </div>
 
           <div class="message">
-            <img src="./images/bluemessage_s.png" alt="" />
-            <img src="./images/bluemessage_big.png" alt="" />
-            <img src="./images/graymessage_s.png" alt="" />
+            <div class="message-inner">
+              <img src="./images/bluemessage_s.png" alt="" />
+            </div>
+            <div class="message-inner">
+              <img src="./images/graymessage_s.png" alt="" /><span>OKAY</span>
+            </div>
+            <div class="message-inner">
+              <img src="./images/bluemessage_big.png" alt="" />
+            </div>
           </div>
         </div>
       </section>

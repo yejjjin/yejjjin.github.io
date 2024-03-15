@@ -12,11 +12,43 @@
       font-size: 50px;
       color: $white;
     }
-    h1 {
-      font-family: $font-scondary;
-      font-size: 100px;
-      color: $white;
+    .main-tit {
       padding-top: 100px;
+      h1 {
+        font-family: $font-scondary;
+        font-size: 100px;
+        color: $white;
+
+        span.cursor {
+          display: inline-block;
+          background-color: #ccc;
+          margin-left: 0.1rem;
+          width: 3px;
+          animation: blink 1s infinite;
+        }
+
+        span.cursor.typing {
+          animation: none;
+        }
+
+        @keyframes blink {
+          0% {
+            background-color: #ccc;
+          }
+          49% {
+            background-color: #ccc;
+          }
+          50% {
+            background-color: transparent;
+          }
+          99% {
+            background-color: transparent;
+          }
+          100% {
+            background-color: #ccc;
+          }
+        }
+      }
     }
   }
 
@@ -48,99 +80,91 @@
     font-size: 100px;
     color: $white;
     text-align: center;
-    margin-bottom: 50px;
+    margin: 100px 0 30px;
   }
 
   .airdrop {
-    height: 500px;
-    width: 412px;
-    background-color: $white;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    .airdrop-tit {
-      height: 124px;
+    position: relative;
+    .airdrop-inner {
+      height: 500px;
+      width: 412px;
+      background-color: $white;
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
 
-      h2 {
-        font-weight: 600;
-      }
-      h3 {
-        font-weight: 500;
-      }
-    }
-
-    .airdrop-img {
-      img {
-        display: block;
-      }
-    }
-
-    .airdrop-btn {
-      width: 100%;
-      height: 66px;
-      display: flex;
-      align-items: center;
-
-      .btn {
-        width: 50%;
+      .airdrop-tit {
+        height: 124px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        height: 100%;
-        font-size: 20px;
+        justify-content: center;
 
-        a {
-          height: 100%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          color: #173fbb;
-          justify-content: center;
+        h2 {
+          font-weight: 600;
+        }
+        h3 {
+          font-weight: 500;
         }
       }
-      .scroll {
-        a {
+
+      .airdrop-img {
+        img {
+          display: block;
+        }
+      }
+
+      .airdrop-btn {
+        width: 100%;
+        height: 66px;
+        display: flex;
+        align-items: center;
+
+        .btn {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          font-size: 20px;
+          height: 100%;
+          color: #173fbb;
+        }
+        .scroll {
           font-weight: 600;
           border-left: 1px solid #d8d8d8;
         }
+
+        .hover {
+          &:hover {
+            .airdrop-hover {
+              display: flex;
+            }
+          }
+        }
       }
     }
-  }
-
-  .airdrop-hover {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    .album {
-      display: flex;
-      background-color: antiquewhite;
+    .airdrop-hover {
+      width: 100%;
+      display: none;
+      justify-content: space-between;
+      position: absolute;
+      padding: 0 30px;
+      .album {
+        width: 25%;
+        background-color: antiquewhite;
+      }
+      .intro {
+        width: 30%;
+        background-color: azure;
+      }
     }
-    .intro {
-      display: flex;
-      background-color: azure;
-    }
-  }
-
-  .airdrop-hover {
-    display: none;
-  }
-  // .hover {
-  //   // 마우스 호버 시 .airdrop-hover를 표시하도록 함
-  //   .airdrop-btn:hover + .airdrop-hover {
-  //     display: flex;
-  //   }
-  // }
-  .airdrop-btn .hover:hover ~ .airdrop-hover {
-    // 마우스 호버 시 .airdrop-hover를 표시하도록 함
-
-    display: flex;
   }
 }
 
@@ -153,6 +177,9 @@
     max-height: 800px;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-image: url(../../images/mac-pc.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -163,11 +190,12 @@
       font-size: 50px;
       display: flex;
       justify-content: center;
-      padding-top: 100px;
+      padding: 100px 0 50px;
     }
 
     .work {
       display: flex;
+      margin: 0 30px;
       .work-view {
         width: 60%;
         background-color: lightblue;

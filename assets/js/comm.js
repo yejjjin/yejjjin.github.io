@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // fullpage 초기화 및 스타일 적용
   $("#fullpage").fullpage({
     //Navigation
     menu: "#menu",
@@ -102,4 +103,24 @@ $(document).ready(function () {
       nextSlideIndex
     ) {},
   });
+
+  // home : cursor 애니메이션
+  const cursorSpan = document.querySelector(".cursor");
+  const text = "ARCHIVE";
+
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      // 텍스트의 다음 글자를 커서 앞에 추가
+      cursorSpan.insertAdjacentText("beforebegin", text[index]);
+      index++;
+      setTimeout(type, 150);
+    }
+  }
+
+  type();
+
+  // home : file 섹션 AOS 적용 (초기화)
+  AOS.init();
 });
