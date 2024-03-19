@@ -269,18 +269,19 @@
     transform: translateY(-50%);
     white-space: nowrap; /* 텍스트가 한 줄로 흐르도록 설정 */
     overflow: hidden; /* 넘치는 텍스트를 숨김 */
-    animation: marquee 15s linear infinite; /* 애니메이션 적용 */
+    // animation: marquee 15s linear infinite; /* 애니메이션 적용 */
+    // animation-iteration-count: infinite;
   }
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%); /* 텍스트의 원래 위치에서 시작 */
-    }
-    100% {
-      transform: translateX(
-        -100%
-      ); /* 텍스트가 왼쪽으로 이동하여 사라지면서 반복 */
-    }
-  }
+  // @keyframes marquee {
+  //   0% {
+  //     transform: translateX(0%); /* 텍스트의 원래 위치에서 시작 */
+  //   }
+  //   100% {
+  //     transform: translateX(
+  //       -100%
+  //     ); /* 텍스트가 왼쪽으로 이동하여 사라지면서 반복 */
+  //   }
+  // }
 
   .message {
     display: none;

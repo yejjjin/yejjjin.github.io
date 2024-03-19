@@ -132,11 +132,18 @@ $(document).ready(function () {
   AOS.init();
 
   // footer
-  const footerTit = document.querySelector(".footer-tit span");
+  // gsap으로 'ME CONTACT' 텍스트가 무한대로 반복되어 흐르는 애니메이션을 설정합니다.
+  let footerTexts = gsap.utils.toArray(".footer-tit");
 
-  function marquee() {
-    footerTit.style.animation = "marquee 15s linear infinite";
-  }
+  footerTexts.forEach((footerText) => {
+    let textWidth = footerText.clientWidth; // 'ME CONTACT' 텍스트의 너비를 가져옵니다.
+    let containerWidth = footerText.parentElement.clientWidth; // 텍스트를 감싸는 컨테이너의 너비를 가져옵니다.
 
-  marquee();
+    // 'ME CONTACT' 텍스트를 오른쪽에서 왼쪽으로 이동시키는 애니메이션을 생성합니다.
+    gsap.fromTo(
+      footerText,
+      { x: containerWidth },
+      { x: -textWidth, duration: 20, ease: "linear", repeat: 1 }
+    );
+  });
 });
