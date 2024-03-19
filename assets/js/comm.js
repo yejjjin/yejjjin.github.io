@@ -104,6 +104,13 @@ $(document).ready(function () {
     ) {},
   });
 
+  $(".scroll").on("click", "a", function (e) {
+    e.preventDefault(); // 기본 동작 방지
+
+    // .airdrop-hover 요소 보이기
+    $(".airdrop-hover").addClass("visible");
+  });
+
   // home : cursor 애니메이션
   const cursorSpan = document.querySelector(".cursor");
   const text = "ARCHIVE";
@@ -123,4 +130,13 @@ $(document).ready(function () {
 
   // home : file 섹션 AOS 적용 (초기화)
   AOS.init();
+
+  // footer
+  const footerTit = document.querySelector(".footer-tit span");
+
+  function marquee() {
+    footerTit.style.animation = "marquee 15s linear infinite";
+  }
+
+  marquee();
 });

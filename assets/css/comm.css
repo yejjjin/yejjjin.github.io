@@ -194,6 +194,7 @@ body {
 @media screen and (min-width: 1280px) {
   body {
     font-size: 16px;
+    font-family: "AppleSDGothicNeoR";
   }
 }
 /* color값은 디자인가이드에 맞게사용 */
@@ -408,10 +409,9 @@ legend {
 }
 .about .airdrop {
   width: 100%;
-  height: 100%;
+  height: 800px;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
 }
 .about .airdrop .airdrop-inner {
@@ -455,29 +455,24 @@ legend {
   height: 100%;
   color: #173fbb;
 }
-.about .airdrop .airdrop-inner .airdrop-btn .btn.hover:hover {
-  /* hover 상태일 때 스타일링 */
+.about .airdrop .airdrop-inner .airdrop-btn .btn a {
+  color: #173fbb;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.about .airdrop .airdrop-inner .airdrop-btn .btn.hover:hover .airdrop-hover {
+.about .airdrop .airdrop-hover {
   width: 100%;
   position: absolute;
-  padding: 0 30px;
-}
-.about .airdrop .airdrop-inner .airdrop-btn .btn.hover:hover .airdrop-hover .album {
-  width: 25%;
-  background-color: antiquewhite;
-}
-.about .airdrop .airdrop-inner .airdrop-btn .btn.hover:hover .airdrop-hover .intro {
-  width: 30%;
-  background-color: azure;
-}
-.about .airdrop .airdrop-inner .airdrop-btn .btn.hover:hover + .airdrop-hover {
-  display: flex; /* .airdrop-hover를 보이도록 함 */
+  display: flex;
   justify-content: space-between;
+  color: #fff;
+  padding: 50px;
 }
-.about .airdrop .airdrop-inner .airdrop-btn .btn.scroll {
-  font-weight: 600;
-  border-left: 1px solid #d8d8d8;
+.about .airdrop .airdrop-hover .intro {
+  background-color: #eee;
 }
 
 .project {
@@ -492,7 +487,6 @@ legend {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-image: url(../../images/mac-pc.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -508,15 +502,37 @@ legend {
 }
 .project .portfolio .work {
   display: flex;
-  margin: 0 30px;
+  margin: 0 300px;
+  max-height: 500px;
 }
 .project .portfolio .work .work-view {
   width: 60%;
-  background-color: lightblue;
+  overflow: hidden;
+  position: relative;
+}
+.project .portfolio .work .work-view img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  transition: transform 5s ease;
+}
+.project .portfolio .work .work-view:hover img {
+  transform: translateY(-100%);
 }
 .project .portfolio .work .work-desc {
   width: 40%;
-  background-color: lavenderblush;
+}
+.project .portfolio .work .work-desc .logo {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 50px;
+}
+.project .portfolio .work .work-desc .desc-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 30px;
+  gap: 15px;
 }
 
 .contact {
@@ -544,14 +560,23 @@ legend {
   height: 700px;
 }
 .contact .footer-tit {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   font-family: "Arsenica-Regular";
   font-size: 100px;
   position: absolute;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
+  white-space: nowrap; /* 텍스트가 한 줄로 흐르도록 설정 */
+  overflow: hidden; /* 넘치는 텍스트를 숨김 */
+  animation: marquee 15s linear infinite; /* 애니메이션 적용 */
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%); /* 텍스트의 원래 위치에서 시작 */
+  }
+  100% {
+    transform: translateX(-100%); /* 텍스트가 왼쪽으로 이동하여 사라지면서 반복 */
+  }
 }
 .contact .message {
   display: none;
