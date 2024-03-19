@@ -135,34 +135,36 @@
           font-size: 20px;
           height: 100%;
           color: #173fbb;
-        }
-        .scroll {
-          font-weight: 600;
-          border-left: 1px solid #d8d8d8;
-        }
 
-        .hover {
-          &:hover {
-            .airdrop-hover {
-              display: flex;
+          &.hover {
+            &:hover {
+              /* hover 상태일 때 스타일링 */
+              .airdrop-hover {
+                width: 100%;
+                // display: none;
+
+                position: absolute;
+                padding: 0 30px;
+                .album {
+                  width: 25%;
+                  background-color: antiquewhite;
+                }
+                .intro {
+                  width: 30%;
+                  background-color: azure;
+                }
+              }
+              + .airdrop-hover {
+                display: flex; /* .airdrop-hover를 보이도록 함 */
+                justify-content: space-between;
+              }
             }
           }
+          &.scroll {
+            font-weight: 600;
+            border-left: 1px solid #d8d8d8;
+          }
         }
-      }
-    }
-    .airdrop-hover {
-      width: 100%;
-      display: none;
-      justify-content: space-between;
-      position: absolute;
-      padding: 0 30px;
-      .album {
-        width: 25%;
-        background-color: antiquewhite;
-      }
-      .intro {
-        width: 30%;
-        background-color: azure;
       }
     }
   }
@@ -185,6 +187,7 @@
     background-position: 50% 50%;
     background-size: contain;
     color: $black;
+    padding: 0 0px;
 
     .port-tit {
       font-size: 50px;
