@@ -74,7 +74,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  // position: relative;
   h1 {
     font-family: $font-scondary;
     font-size: 100px;
@@ -85,11 +85,12 @@
 
   .airdrop {
     width: 100%;
-    height: 800px;
+    height: 100%;
     display: flex;
     justify-content: center;
     // align-items: center;
     position: relative;
+    font-family: "AppleSDGothicNeoSB";
     .airdrop-inner {
       height: 500px;
       width: 412px;
@@ -143,20 +144,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border-left: 1px solid #eee;
           }
         }
       }
     }
+
     .airdrop-hover {
       width: 100%;
+      display: none;
       position: absolute;
-      display: flex;
-      justify-content: space-between;
-      color: $white;
-      padding: 50px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
 
       .intro {
         background-color: #eee;
+        position: absolute;
+        right: 50px;
+      }
+      .album {
+        position: absolute;
+        left: 50px;
       }
     }
   }
@@ -222,9 +229,6 @@
           flex-direction: column;
           padding: 10px 0 0 30px;
           gap: 15px;
-
-          // li {
-          // }
         }
       }
     }
@@ -237,6 +241,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 
   .inner {
     height: 100%;
@@ -251,39 +256,55 @@
     }
     .phone {
       display: flex;
+      z-index: 10;
+
       img {
         height: 700px;
       }
     }
   }
 
-  .footer-tit {
-    // width: 100%;
-    // display: flex;
-    // justify-content: space-between;
-    font-family: $font-scondary;
-    font-size: 100px;
+  .marquee {
+    overflow: hidden;
+    display: flex;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    white-space: nowrap; /* 텍스트가 한 줄로 흐르도록 설정 */
-    overflow: hidden; /* 넘치는 텍스트를 숨김 */
-    // animation: marquee 15s linear infinite; /* 애니메이션 적용 */
-    // animation-iteration-count: infinite;
   }
-  // @keyframes marquee {
-  //   0% {
-  //     transform: translateX(0%); /* 텍스트의 원래 위치에서 시작 */
-  //   }
-  //   100% {
-  //     transform: translateX(
-  //       -100%
-  //     ); /* 텍스트가 왼쪽으로 이동하여 사라지면서 반복 */
-  //   }
-  // }
+
+  .marquee h1 {
+    font-family: $font-scondary;
+    font-size: 80px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+  }
 
   .message {
-    display: none;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .message-inner-blues {
+      img {
+        height: 60px;
+        // width: 100%;
+      }
+    }
+    .message-inner-grays {
+      img {
+        height: 60px;
+      }
+    }
+    .message-inner-big {
+      img {
+        height: 95px;
+      }
+    }
   }
 }

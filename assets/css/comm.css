@@ -398,7 +398,6 @@ legend {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 .about h1 {
   font-family: "Arsenica-Regular";
@@ -409,10 +408,11 @@ legend {
 }
 .about .airdrop {
   width: 100%;
-  height: 800px;
+  height: 100%;
   display: flex;
   justify-content: center;
   position: relative;
+  font-family: "AppleSDGothicNeoSB";
 }
 .about .airdrop .airdrop-inner {
   height: 500px;
@@ -462,17 +462,22 @@ legend {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-left: 1px solid #eee;
 }
 .about .airdrop .airdrop-hover {
   width: 100%;
+  display: none;
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  padding: 50px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .about .airdrop .airdrop-hover .intro {
   background-color: #eee;
+  position: absolute;
+  right: 50px;
+}
+.about .airdrop .airdrop-hover .album {
+  position: absolute;
+  left: 50px;
 }
 
 .project {
@@ -541,6 +546,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .contact .inner {
   height: 100%;
@@ -555,20 +561,42 @@ legend {
 }
 .contact .inner .phone {
   display: flex;
+  z-index: 10;
 }
 .contact .inner .phone img {
   height: 700px;
 }
-.contact .footer-tit {
-  font-family: "Arsenica-Regular";
-  font-size: 100px;
+.contact .marquee {
+  overflow: hidden;
+  display: flex;
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  white-space: nowrap; /* 텍스트가 한 줄로 흐르도록 설정 */
-  overflow: hidden; /* 넘치는 텍스트를 숨김 */
+}
+.contact .marquee h1 {
+  font-family: "Arsenica-Regular";
+  font-size: 80px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }
 .contact .message {
-  display: none;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contact .message .message-inner-blues img {
+  height: 60px;
+}
+.contact .message .message-inner-grays img {
+  height: 60px;
+}
+.contact .message .message-inner-big img {
+  height: 95px;
 }/*# sourceMappingURL=comm.css.map */

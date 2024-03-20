@@ -104,13 +104,6 @@ $(document).ready(function () {
     ) {},
   });
 
-  $(".scroll").on("click", "a", function (e) {
-    e.preventDefault(); // 기본 동작 방지
-
-    // .airdrop-hover 요소 보이기
-    $(".airdrop-hover").addClass("visible");
-  });
-
   // home : cursor 애니메이션
   const cursorSpan = document.querySelector(".cursor");
   const text = "ARCHIVE";
@@ -131,19 +124,40 @@ $(document).ready(function () {
   // home : file 섹션 AOS 적용 (초기화)
   AOS.init();
 
-  // footer
-  // gsap으로 'ME CONTACT' 텍스트가 무한대로 반복되어 흐르는 애니메이션을 설정합니다.
-  let footerTexts = gsap.utils.toArray(".footer-tit");
+  // airdrop
+  const scrollBtn = document.querySelector(".hover");
+  const airdropHover = document.querySelector(".airdrop-hover");
 
-  footerTexts.forEach((footerText) => {
-    let textWidth = footerText.clientWidth; // 'ME CONTACT' 텍스트의 너비를 가져옵니다.
-    let containerWidth = footerText.parentElement.clientWidth; // 텍스트를 감싸는 컨테이너의 너비를 가져옵니다.
-
-    // 'ME CONTACT' 텍스트를 오른쪽에서 왼쪽으로 이동시키는 애니메이션을 생성합니다.
-    gsap.fromTo(
-      footerText,
-      { x: containerWidth },
-      { x: -textWidth, duration: 20, ease: "linear", repeat: 1 }
-    );
+  scrollBtn.addEventListener("mouseenter", function () {
+    airdropHover.style.display = "flex";
+    airdropHover.style.justifyContent = "space-between";
   });
+
+  scrollBtn.addEventListener("mouseleave", function () {
+    airdropHover.style.display = "none";
+  });
+
+  // footer
+  function Marquee(selector, speed) {
+    const parentSelector = document.querySelector(selector);
+    const clone = parentSelector.innerHTML;
+    const firstElement = parentSelector.children[0];
+    let i = 0;
+    console.log(firstElement);
+    parentSelector.insertAdjacentHTML("beforeend", clone);
+    parentSelector.insertAdjacentHTML("beforeend", clone);
+
+    setInterval(function () {
+      firstElement.style.marginLeft = `-${i}px`;
+      if (i > firstElement.clientWidth) {
+        i = 0;
+      }
+      i = i + speed;
+    }, 0);
+  }
+
+  //after window is completed load
+  //1 class selector for marquee
+  //2 marquee speed 0.2
+  window.addEventListener("load", Marquee(".marquee", 0.15));
 });
