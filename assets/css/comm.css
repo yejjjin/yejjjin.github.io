@@ -591,6 +591,9 @@ legend {
   width: 100%;
   height: 100%;
 }
+.contact .message .message-inner-blues {
+  position: relative;
+}
 .contact .message .message-inner-blues img {
   height: 60px;
 }
@@ -598,5 +601,5 @@ legend {
   height: 60px;
 }
 .contact .message .message-inner-big img {
-  height: 95px;
+  height: 90px;
 }/*# sourceMappingURL=comm.css.map */
