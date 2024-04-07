@@ -337,7 +337,7 @@ legend {
 }
 .home .home-tit {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 45px;
 }
 .home .home-tit p {
   font-size: 50px;
@@ -348,7 +348,7 @@ legend {
 }
 .home .home-tit .main-tit h1 {
   font-family: "Arsenica-Regular";
-  font-size: 100px;
+  font-size: 80px;
   color: #fff;
 }
 .home .home-tit .main-tit h1 span.cursor {
@@ -401,10 +401,10 @@ legend {
 }
 .about h1 {
   font-family: "Arsenica-Regular";
-  font-size: 100px;
+  font-size: 80px;
   color: #fff;
   text-align: center;
-  margin: 100px 0 30px;
+  margin: 60px 0 30px;
 }
 .about .airdrop {
   width: 100%;
@@ -475,6 +475,9 @@ legend {
   position: absolute;
   right: 50px;
 }
+.about .airdrop .airdrop-hover .intro p {
+  padding-bottom: 10px;
+}
 .about .airdrop .airdrop-hover .album {
   position: absolute;
   left: 50px;
@@ -487,7 +490,7 @@ legend {
   align-items: center;
 }
 .project .portfolio {
-  max-height: 800px;
+  max-height: 700px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -500,14 +503,14 @@ legend {
   padding: 0 0px;
 }
 .project .portfolio .port-tit {
-  font-size: 50px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
-  padding: 100px 0 50px;
+  padding: 100px 0 30px;
 }
 .project .portfolio .work {
   display: flex;
-  margin: 0 300px;
+  margin: 0 150px;
   max-height: 500px;
 }
 .project .portfolio .work .work-view {

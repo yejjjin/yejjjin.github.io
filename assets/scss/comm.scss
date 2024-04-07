@@ -7,7 +7,7 @@
   justify-content: space-between;
   .home-tit {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 45px;
     p {
       font-size: 50px;
       color: $white;
@@ -16,7 +16,7 @@
       padding-top: 100px;
       h1 {
         font-family: $font-scondary;
-        font-size: 100px;
+        font-size: 80px;
         color: $white;
 
         span.cursor {
@@ -77,10 +77,10 @@
   // position: relative;
   h1 {
     font-family: $font-scondary;
-    font-size: 100px;
+    font-size: 80px;
     color: $white;
     text-align: center;
-    margin: 100px 0 30px;
+    margin: 60px 0 30px;
   }
 
   .airdrop {
@@ -160,6 +160,9 @@
         background-color: #eee;
         position: absolute;
         right: 50px;
+        p {
+          padding-bottom: 10px;
+        }
       }
       .album {
         position: absolute;
@@ -175,8 +178,7 @@
   justify-content: center;
   align-items: center;
   .portfolio {
-    max-height: 800px;
-    // min-width: 900px;
+    max-height: 700px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -189,15 +191,15 @@
     padding: 0 0px;
 
     .port-tit {
-      font-size: 50px;
+      font-size: 40px;
       display: flex;
       justify-content: center;
-      padding: 100px 0 50px;
+      padding: 100px 0 30px;
     }
 
     .work {
       display: flex;
-      margin: 0 300px;
+      margin: 0 150px;
       max-height: 500px;
 
       .work-view {
