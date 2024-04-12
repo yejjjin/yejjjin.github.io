@@ -468,19 +468,39 @@ legend {
   width: 100%;
   display: none;
   position: absolute;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .about .airdrop .airdrop-hover .intro {
-  background-color: #eee;
+  color: #fff;
   position: absolute;
   right: 50px;
+  padding: 20px;
 }
-.about .airdrop .airdrop-hover .intro p {
-  padding-bottom: 10px;
+.about .airdrop .airdrop-hover .intro .name {
+  font-size: 20px;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+.about .airdrop .airdrop-hover .intro .name span {
+  padding-left: 10px;
+}
+.about .airdrop .airdrop-hover .intro ul {
+  padding-bottom: 30px;
+}
+.about .airdrop .airdrop-hover .intro ul li {
+  padding-bottom: 5px;
+}
+.about .airdrop .airdrop-hover .intro ul .introtit {
+  font-size: 20px;
 }
 .about .airdrop .airdrop-hover .album {
+  max-width: 413px;
+  width: 100%;
   position: absolute;
   left: 50px;
+}
+.about .airdrop .airdrop-hover .album img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .project {
@@ -510,11 +530,11 @@ legend {
 }
 .project .portfolio .work {
   display: flex;
-  margin: 0 150px;
+  margin: 0 170px;
   max-height: 500px;
 }
 .project .portfolio .work .work-view {
-  width: 60%;
+  width: 50%;
   overflow: hidden;
   position: relative;
 }
@@ -529,12 +549,11 @@ legend {
   transform: translateY(-100%);
 }
 .project .portfolio .work .work-desc {
-  width: 40%;
-}
-.project .portfolio .work .work-desc .logo {
+  width: 50%;
+  margin-left: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 30px 0 50px;
 }
 .project .portfolio .work .work-desc .desc-list {
   display: flex;
@@ -542,32 +561,31 @@ legend {
   padding: 10px 0 0 30px;
   gap: 15px;
 }
+.project .portfolio .work .work-desc .desc-list b {
+  color: #52a6ff;
+  padding-right: 20px;
+}
+.project .portfolio .work .work-desc .desc-list li:nth-child(5) {
+  margin-top: 30px;
+}
+.project .portfolio .work .work-desc .desc-list li:last-child {
+  margin-top: 10px;
+}
+.project .portfolio .work .work-desc .desc-list .button {
+  background-color: #52a6ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 
 .contact {
   height: 100vh;
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-}
-.contact .inner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 50px 0 30px;
-}
-.contact .inner .copyright {
-  display: flex;
-}
-.contact .inner .phone {
-  display: flex;
-  z-index: 10;
-}
-.contact .inner .phone img {
-  height: 700px;
+  justify-content: center;
+  position: relative;
 }
 .contact .marquee {
   overflow: hidden;
@@ -584,25 +602,35 @@ legend {
   text-transform: uppercase;
   letter-spacing: 8px;
 }
-.contact .message {
-  position: absolute;
-  top: 0;
+.contact .ct-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  max-width: 500px;
   width: 100%;
-  height: 100%;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.072);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 30px;
 }
-.contact .message .message-inner-blues {
-  position: relative;
+.contact .ct-box .ft-tit {
+  padding: 50px;
+  font-size: 32px;
 }
-.contact .message .message-inner-blues img {
-  height: 60px;
+.contact .ct-box .ct-list {
+  display: flex;
+  margin-bottom: 50px;
 }
-.contact .message .message-inner-grays img {
-  height: 60px;
+.contact .ct-box .ct-list li {
+  padding: 50px;
 }
-.contact .message .message-inner-big img {
-  height: 90px;
+.contact .ct-box .ct-list li a {
+  color: #fff;
+  font-size: 22px;
+  display: block;
+  border-bottom: 2px solid #52a6ff;
+}
+.contact .ct-box .copyright {
+  font-size: 15px;
 }/*# sourceMappingURL=comm.css.map */

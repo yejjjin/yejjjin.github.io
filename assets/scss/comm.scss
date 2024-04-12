@@ -154,19 +154,40 @@
       width: 100%;
       display: none;
       position: absolute;
-      transition: opacity 0.3s ease, transform 0.3s ease;
 
       .intro {
-        background-color: #eee;
+        color: $white;
         position: absolute;
         right: 50px;
-        p {
-          padding-bottom: 10px;
+        padding: 20px;
+
+        .name {
+          font-size: 20px;
+          margin-top: 50px;
+          padding-bottom: 30px;
+          span {
+            padding-left: 10px;
+          }
+        }
+
+        ul {
+          padding-bottom: 30px;
+          li {
+            padding-bottom: 5px;
+          }
+          .introtit {
+            font-size: 20px;
+          }
         }
       }
       .album {
+        max-width: 413px;
+        width: 100%;
         position: absolute;
         left: 50px;
+        img {
+          object-fit: cover;
+        }
       }
     }
   }
@@ -199,11 +220,11 @@
 
     .work {
       display: flex;
-      margin: 0 150px;
+      margin: 0 170px;
       max-height: 500px;
 
       .work-view {
-        width: 60%;
+        width: 50%;
         overflow: hidden;
         position: relative;
 
@@ -215,22 +236,52 @@
         }
 
         &:hover img {
-          transform: translateY(-100%); // 호버 시 이미지가 아래로 이동
+          transform: translateY(-100%);
         }
       }
       .work-desc {
-        width: 40%;
-        // background-color: lavenderblush;
-        .logo {
-          display: flex;
-          justify-content: center;
-          margin: 30px 0 50px;
-        }
+        width: 50%;
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        // .logo {
+        //   display: flex;
+        //   justify-content: center;
+        //   margin: 15px 0 40px;
+        //   max-width: 200px;
+        //   width: 100%;
+        //   img {
+        //     object-fit: contain;
+        //     display: block;
+        //   }
+        // }
         .desc-list {
           display: flex;
           flex-direction: column;
           padding: 10px 0 0 30px;
           gap: 15px;
+
+          b {
+            color: $primary;
+            padding-right: 20px;
+          }
+
+          li:nth-child(5) {
+            margin-top: 30px;
+          }
+
+          li:last-child {
+            margin-top: 10px;
+          }
+
+          .button {
+            background-color: $primary;
+            color: $white;
+            padding: 10px 20px;
+            border-radius: 10px;
+          }
         }
       }
     }
@@ -242,29 +293,9 @@
   color: $white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   position: relative;
-
-  .inner {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 0 30px;
-
-    .copyright {
-      display: flex;
-    }
-    .phone {
-      display: flex;
-      z-index: 10;
-
-      img {
-        height: 700px;
-      }
-    }
-  }
 
   .marquee {
     overflow: hidden;
@@ -273,41 +304,50 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+
+    h1 {
+      font-family: $font-scondary;
+      font-size: 80px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+    }
   }
 
-  .marquee h1 {
-    font-family: $font-scondary;
-    font-size: 80px;
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-  }
-
-  .message {
-    position: absolute;
-    top: 0;
+  .ct-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    // justify-content: center;
+    max-width: 500px;
     width: 100%;
-    height: 100%;
-    .message-inner-blues {
-      position: relative;
-      img {
-        height: 60px;
-        // width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.072);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+
+    .ft-tit {
+      padding: 50px;
+      font-size: 32px;
+    }
+
+    .ct-list {
+      display: flex;
+      margin-bottom: 50px;
+
+      li {
+        padding: 50px;
+        a {
+          color: $white;
+          font-size: 22px;
+          display: block;
+          border-bottom: 2px solid $primary;
+        }
       }
     }
-    .message-inner-grays {
-      img {
-        height: 60px;
-      }
-    }
-    .message-inner-big {
-      img {
-        height: 90px;
-      }
+
+    .copyright {
+      font-size: 15px;
     }
   }
 }
