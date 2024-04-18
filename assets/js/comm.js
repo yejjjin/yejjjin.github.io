@@ -121,9 +121,6 @@ $(document).ready(function () {
 
   type();
 
-  // home : file 섹션 AOS 적용 (초기화)
-  AOS.init();
-
   // airdrop
   const scrollBtn = document.querySelector(".hover");
   const airdropHover = document.querySelector(".airdrop-hover");

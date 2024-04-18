@@ -354,7 +354,7 @@ legend {
 .home .home-tit .main-tit h1 span.cursor {
   display: inline-block;
   background-color: #ccc;
-  margin-left: 0.1rem;
+  margin-left: 3px;
   width: 3px;
   animation: blink 1s infinite;
 }
@@ -493,14 +493,16 @@ legend {
   font-size: 20px;
 }
 .about .airdrop .airdrop-hover .album {
-  max-width: 413px;
+  max-width: 300px;
   width: 100%;
+  margin: 75px 0 0 70px;
   position: absolute;
   left: 50px;
 }
 .about .airdrop .airdrop-hover .album img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 350px;
 }
 
 .project {
@@ -534,7 +536,7 @@ legend {
   max-height: 500px;
 }
 .project .portfolio .work .work-view {
-  width: 50%;
+  width: 60%;
   overflow: hidden;
   position: relative;
 }
@@ -549,7 +551,7 @@ legend {
   transform: translateY(-100%);
 }
 .project .portfolio .work .work-desc {
-  width: 50%;
+  width: 40%;
   margin-left: 30px;
   display: flex;
   flex-direction: column;
